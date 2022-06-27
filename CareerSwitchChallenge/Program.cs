@@ -31,7 +31,8 @@ namespace CareerSwitchChallenge
             }
 
             bool issuccess = Check_API.Is_success(check_endpoint, orderer_blocks, token.Token);
-            Console.WriteLine(issuccess);
+            Console.WriteLine("Result of the Check API: " + issuccess);
+            Console.ReadKey();
         }
     }
 }
