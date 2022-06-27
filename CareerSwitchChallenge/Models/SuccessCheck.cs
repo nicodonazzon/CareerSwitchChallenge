@@ -5,6 +5,6 @@ namespace CareerSwitchChallenge.Models
 {
     public class SuccessCheck
     {
-        public String Encoded { get; set; }
+        public String encoded { get; set; }
     }
 }

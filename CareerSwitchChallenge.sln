@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CareerSwitchChallenge", "CareerSwitchChallenge\CareerSwitchChallenge.csproj", "{59C7684B-13D8-471C-93FD-84D8991D9CB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CareerSwitchChallenge", "CareerSwitchChallenge\CareerSwitchChallenge.csproj", "{59C7684B-13D8-471C-93FD-84D8991D9CB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarrerSwitchChallengeTests", "CarrerSwitchChallengeTests\CarrerSwitchChallengeTests.csproj", "{43F28208-B460-45F8-99E8-A02D8BE5B196}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{59C7684B-13D8-471C-93FD-84D8991D9CB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59C7684B-13D8-471C-93FD-84D8991D9CB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59C7684B-13D8-471C-93FD-84D8991D9CB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43F28208-B460-45F8-99E8-A02D8BE5B196}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43F28208-B460-45F8-99E8-A02D8BE5B196}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43F28208-B460-45F8-99E8-A02D8BE5B196}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43F28208-B460-45F8-99E8-A02D8BE5B196}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
