@@ -2,8 +2,8 @@
 
 namespace CareerSwitchChallenge.Models
 {
-    public class Token_request
+    public class Response
     {
-        public String Token { get; set; }
+        public Boolean Message { get; set; }
     }
 }

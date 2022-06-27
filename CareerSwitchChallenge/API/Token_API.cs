@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using CareerSwitchChallenge.Http_req;
+﻿using CareerSwitchChallenge.Http_req;
 using Newtonsoft.Json;
 using CareerSwitchChallenge.Models;
-namespace CareerSwitchChallenge.Connections
+
+namespace CareerSwitchChallenge.API
 {
     static class Token_API
     {

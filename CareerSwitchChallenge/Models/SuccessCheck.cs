@@ -3,8 +3,8 @@ using System.Collections.Generic;
 
 namespace CareerSwitchChallenge.Models
 {
-    public class BlockCheck
+    public class SuccessCheck
     {
-        public List<String> blocks { get; set; }
+        public String Encoded { get; set; }
     }
 }

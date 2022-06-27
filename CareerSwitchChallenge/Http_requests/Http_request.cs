@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Net;
 using System.IO;
-using System.Text;
-using System.Text.Json;
-using System.Net.Http;
+using Newtonsoft.Json;
 
 namespace CareerSwitchChallenge.Http_req
 {
@@ -21,23 +15,29 @@ namespace CareerSwitchChallenge.Http_req
 
             Stream data = client.OpenRead(url);
             StreamReader reader = new StreamReader(data);
-            string s = reader.ReadToEnd();
+            string str = reader.ReadToEnd();
             data.Close();
             reader.Close();
 
-            return s;
+            return str;
         }
-        static public async Task<string> HttpPost(Object obj, string url)
+        static public string HttpPost(Object obj, string url)
         {
-            var json = JsonSerializer.Serialize(obj);
-
-            var data = new StringContent(json, Encoding.UTF8, "application/json");
-
-            using var client = new HttpClient();
-            var response = await client.PostAsync(url, data);
-            string result = response.Content.ReadAsStringAsync().Result;
-
-            return result;
+            string data;
+            WebRequest request = WebRequest.Create(url);
+            request.Method = "POST";
+            request.ContentType = "application/json;charset=UTF-8";
+            StreamWriter requestWriter = new StreamWriter(request.GetRequestStream());
+            string jsondata = JsonConvert.SerializeObject(obj);
+            requestWriter.Write(jsondata);
+            requestWriter.Close();
+            WebResponse response = request.GetResponse();
+            using var reqstream = response.GetResponseStream();
+            {
+                StreamReader reader = new StreamReader(response.GetResponseStream());
+                data = reader.ReadToEnd();
+            }
+            return data;
         }
     }
 }

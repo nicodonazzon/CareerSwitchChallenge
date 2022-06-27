@@ -1,18 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using CareerSwitchChallenge.Http_req;
 using Newtonsoft.Json;
 using CareerSwitchChallenge.Models;
+using System.Net;
+using System.IO;
+using CareerSwitchChallenge.Http_req;
+
 namespace CareerSwitchChallenge.API
 {
-    static class Token_API
+    static class Check_API
     {
-        static public Token_request Get_Token(string endpoint_token, string token_parameters)
+        static public Boolean Is_secuential(BlockCheck block,string url, string token)
         {
-            string str_request = Http_request.HttpGet(endpoint_token + $"?email={token_parameters}");
-            Token_request token = JsonConvert.DeserializeObject<Token_request>(str_request);
-            return token;
+            string url_req = url + "?token=" + token;
+            string data = Http_request.HttpPost(block, url_req);
+            Response is_secuential = JsonConvert.DeserializeObject<Response>(data);
+            return is_secuential.Message;
         }
     }
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace CareerSwitchChallenge.Models
 {
@@ -8,6 +7,6 @@ namespace CareerSwitchChallenge.Models
     {
         public Int32 Id { get; set; }
         public Int32 length { get; set; }
-        public List<string> data { get; set; }
+        public List<String> data { get; set; }
     }
 }
